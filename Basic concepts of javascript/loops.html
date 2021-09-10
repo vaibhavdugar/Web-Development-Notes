@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        This is about Loops
+    </div>
+    <script>
+        // For Loop
+        // for(let i=0; i<4; i++){
+        //     console.log(i);
+        // }
+
+        // To print an array using for loop
+        let arr = new Array("Vaibhav", "Rahul", "Aman", "Neha", "Riya");
+        for(let i=0;i<arr.length;i++){
+            console.log("Good Morning " + arr[i]);
+        }
+
+        // Short form to print above messages (forEach)
+        arr.forEach(function f(element){
+            console.log("Good Night " + element);
+        });  // Here arr is the name of the array and f is the name of the function and element is that which is at different indices of the array.
+
+        // Another method to print this (for of)
+        for(element of arr){
+            console.log("I love You " + element);
+        }
+
+        // To iterate over objects in JavaScript
+        let employee = {
+            name: "Akshay",
+            salary: 500,
+            company: "Abobe",
+        }
+        for(key in employee){
+            console.log(`The ${key} of employee is ${employee[key]}`);
+        }
+
+        // While loop in JS
+        let i = 0;
+        while(i<4){
+            console.log(`${i} is less than 4`);
+            i++;
+        }
+
+        // do-while loop
+        let j = 0;
+        do{
+            console.log(`${j} is less than 5`);
+            j++;
+        }
+        while(j<5);   // In this loop first the loop runs and then condition is checked. If the condition is false then also the loop will run one time.
+    </script>
+</body>
+</html>

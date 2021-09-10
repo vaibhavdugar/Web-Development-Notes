@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and Text Shadow </title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 23px 10px;
+            /* border: 2px solid red; */
+            background-color: burlywood;
+            margin: 23px 10px;
+            box-shadow: 10px 10px rgb(241, 86, 24);  /*(box-shadow: offset-x offset-y color) this is the general form to write box shadow. this gives box shadow on bottom and right*/
+            box-shadow: -10px -10px blue; /*This gives box-shadow on top and left*/
+
+            /* box-shadow: offset-x offset-y blur-radius color */
+            box-shadow: 7px 5px 10px green;  /*10px at last is used to give blur effect (blur radius) to the box shadow*/
+
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color */
+            box-shadow: 7px 5px 10px 4px rgb(203, 33, 209); /*4px at last is the spread radius. It spreads the shadow in all directions*/
+
+            box-shadow: inset 8px 8px green; /*When we use inset the shadow is inside the box*/
+
+            box-shadow: 12px 5px green, 5px 12px red;  /*This is used to give multiple shadows to the box*/
+
+        }
+        .card h1{
+            text-shadow: 3px 3px white;
+            text-shadow: 3px 3px 6px white; 
+            /*There is no (spread radius) in text-shadow and all other properties are same as box-shadow*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h1>Card1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laboriosam alias in, tempore molestias voluptate quos quaerat ipsam mollitia libero harum numquam modi sapiente tempora ipsa. Numquam delectus quia, ut tempore molestias architecto nobis.</p>
+        </div>
+        <div class="card" id="card2">
+            <h1>Card2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ea laudantium veritatis libero, soluta maxime error vel sunt, aperiam corrupti obcaecati! Recusandae nobis delectus sapiente, quisquam esse facilis ipsa, labore illum aliquid tempora voluptas!</p>
+        </div>
+        <div class="card" id="card3">
+            <h1>Card3</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed officia itaque tempore nulla, facere quas quod hic dignissimos minus quia magni debitis consequatur ab illo fugit architecto et ullam, doloremque deleniti eaque animi accusamus!</p>
+        </div>
+    </div>
+</body>
+</html>

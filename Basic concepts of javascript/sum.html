@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" placeholder="Enter num1" id="num1">
+        <input type="number" placeholder="Enter num2" id="num2">
+        <input type="number" placeholder="Enter num3" id="num3">
+        <button onclick="GetValue()">Answer</button>
+    </form>
+    <script>
+        // Since prompt takes only string, it will consider numbers also string and concatinate them. We use * operator as it forces everything to act like numbers.
+        // var a = prompt("Enter num1: ") * 1;
+        // var b = prompt("Enter num2: ") * 1;
+        // var c = prompt("Enter num3: ") * 1;
+        // var d = a + b + c;
+        // alert(d);
+
+        function GetValue(){
+            var a = document.getElementById("num1").value*1;
+            var b = document.getElementById("num2").value*1;
+            var c = document.getElementById("num3").value*1;
+            var d = a + b + c;
+            alert(d);
+        }        
+    </script>
+</body>
+</html>

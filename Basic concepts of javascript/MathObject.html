@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        This is Math Object tutorial
+    </div>
+    <script>
+        // Printing the Math Object
+        let m = Math;
+        console.log(m);  // All the constants of math object will be printed.
+        console.log("The value of Math.E is ", Math.E);
+        // Simillarly we can get the value of different functions.
+        // log2E = log e base 2
+        // Sqrt1_2 = square root of 1/2
+
+        // Printing the functions from math object
+        // Round function
+        let a = 34.765;
+        let b = 78.342;
+        console.log("The value of a and b rounded is ", Math.round(a), Math.round(b));
+
+        // Pow (Power) function
+        let x = 2;
+        let y = 3;
+        console.log("2 to the power 3 is ", Math.pow(2,3));
+
+        // Sqrt function
+        console.log("Square root of given number is ", Math.sqrt(16));
+
+        let p = 50;
+        console.log("Square root of 50 is ", Math.round(Math.sqrt(p)));
+
+        // Ceil and floor functions
+        // Ceil - round to upper value, floor - round to lower value
+        console.log("35.42 rounded up to nearest integer is  ", Math.ceil(35.42));
+        console.log("35.42 rounded down to nearest integer is  ",Math.floor(35.42));
+
+        // Abs function - Provides the absolute value
+        console.log("The absolute value of -5 is", Math.abs(-5));
+
+        // Trignometric Functions - We give the values in radian and not in degree
+        console.log("The value of sin(pi) is", Math.sin(Math.PI));
+
+        console.log("The value of sin(pi/2) is", Math.sin(Math.PI/2));
+
+        // Simillarly we can find the values of tan and cos
+
+        // Min and Max functions
+        console.log("Minimum value of 4,2,5,8,1 is", Math.min(4,2,5,8,1));
+
+        console.log("Maximum value of 4,2,5,8,1 is", Math.max(4,2,5,8,1));
+
+        // log function
+        console.log("The logrithmic value of any number base E is", Math.log(2));
+
+        console.log("The logrithmic value of any number base 10 is",Math.log10(2));
+
+        // Generating a random number
+        console.log("The random value between 0 and 1 is",Math.random());  // Math.random() gives any random value between 0 and 1
+
+        // The formula to generate random value between two numbers a and b --> a + (b-a)*Math.random()
+        console.log("The random value between 2 and 3 is", 2+(3-2)*Math.random());
+    </script>
+</body>
+</html> 

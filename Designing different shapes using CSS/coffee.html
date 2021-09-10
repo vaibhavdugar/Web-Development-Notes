@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(242, 177, 255);
+        }
+        .coffee{
+            height: 100px;
+            width: 200px;
+            background-color: rgb(163, 10, 112);
+            border-radius: 10px 10px 100px 100px;
+            position: relative;
+        }
+        .coffee::before{
+            content: "";
+            position: absolute;
+            height: 16px;
+            width: 200px;
+            background-color: rgb(163, 10, 112);
+            top: 97px;
+            border-radius: 50%;
+        }
+        .coffee::after{
+            content: "";
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            background-color: rgb(163, 10, 112);
+            top: -75px;
+            left: 25px;
+            border-radius: 50%;
+            filter: blur(15px);
+            opacity: 0.68;
+            box-shadow: 73px 40px 36px 2px rgb(163, 10, 112), 60px -25px 18px 2px rgb(163, 10, 112), 51px 24px 20px rgb(163, 10, 112), 117px 12px 20px 2px rgb(163, 10, 112)  ;
+        }
+        .handle{
+            height: 40px;
+            width: 50px;
+            border: 7.5px solid rgb(163, 10, 112);
+            position: absolute;
+            left: 154px;
+            top: 10px;
+            border-radius: 50% 12px 40px 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="coffee">
+            <div class="handle"></div>
+        </div>
+    </div>
+</body>
+</html>

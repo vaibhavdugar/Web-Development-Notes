@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height, Width, Borders and Background</title>
+    <style>
+        #firstpara{
+            background-color: aqua;
+            height: 100px;  
+            width: 500px;    /*to increase height and width of a paragraph*/
+
+            border: 4px solid black;   /*types of borders: solid, dashed, dotted, double*/
+
+            /* border-width: 4px;
+            border-color: black;
+            border-style: solid; */
+
+            border-radius: 6px;      /*to make the corners of the border curvy*/
+
+            border: 2 3 4px;        /*top (right and left) bottom*/
+            
+        }
+        #secondpara{
+            background-color: rgb(179, 255, 0);
+            height: 100px;  
+            width: 500px;
+            border-top: 2px solid violet;  /*for border on only top*/
+            border-left: 2px solid violet;
+            border-right: 2px solid rgb(161, 94, 18);
+            border-bottom: 2px solid rgb(49, 13, 150);
+            border-top-left-radius: 6px;  /*only one corner will be curved*/
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+        #thirdpara{
+            height: 1000px;  
+            width: 500px;
+            border: 2px solid red;
+            background-image: url('https://www.codewithharry.com/assets/img/logo.png');
+            background-repeat: no-repeat;  /*repeat-x and repeat-y will make it repeat on x and y axis */
+
+            background-position: center center;
+            /* background-position: center top; */
+            /* background-position: center left; */
+            /* background-position: 15px top; */
+        }
+    </style>
+</head>
+<body>
+    <h2>This is heading</h2>
+    <p id="firstpara">This is a paragraph</p>
+    <p id="secondpara">This is a second paragraph</p>
+    <p id="thirdpara">This is a third paragraph</p>
+</body>
+</html>

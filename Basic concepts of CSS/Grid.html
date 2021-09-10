@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            /* container is our grid and all the items of our container are grid items */
+
+            display: grid;  /*grid is similar to flexbox. Both are used for making layouts of a website*/
+
+            /* grid also contains rows and columns but don't confuse it with html table. both are different. */
+
+            grid-template-columns: 300px 200px 100px; /*3 columns will be created with the width of 300px 200px and 100px respectively*/
+            grid-template-columns: 300px auto 100px;  /*first column will take 300px space while second will take all the space in between and leave only 100px at last for the third column*/
+            grid-template-columns: 300px 200px auto;  /*first colummn will take 300px space while second will take 200px and last column will occupy the remaining space */
+            grid-template-columns: 300px auto auto;   /*first column will take 300px space while other two columns will take equal spaces and all of them will take the complete width of the screen*/
+            grid-template-columns: 1fr 4fr 1fr; /*the complete screen will be divided in the ratio of 1:4:1  we also use fr units so that our grid is responsive (fr means fraction)*/
+            grid-template-columns: repeat(5, auto);  /*This will make 5 columns and their width is auto*/
+
+            grid-gap: 3rem;  /*gap between each item is 3rem. this is similar to margin but it's not in all direction, just between two grid elements*/
+        }
+        .item{
+            /* height: 100px;
+            width: 100px; */
+            border: 2px solid black;
+            background-color: sienna;
+            /* margin: 30px; */
+            padding: 8px 0px  ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+    </div>
+</body>
+</html>

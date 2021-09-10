@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        *{  /*it is universal selector which is used for every element like div, body, button or any other*/
+          box-sizing: border-box;  
+          margin: 0;            
+          padding: 0;       /*initially margin and padding are 0 until we change them below*/
+        }
+        body{
+            background-color: #f4e3f7;
+        }
+        .container{
+            background-color: rgb(224 175 232);
+            border: 2px solid black;
+
+            /*for padding/margin in every direction*/
+
+            /* padding: 40px; */
+
+            /*direction specific padding/margin*/
+
+            /* padding-top: 50px; 
+            padding-bottom: 50px;  
+            padding-left: 20px; */  
+
+            /* padding/margin: top right bottom left*/ 
+
+            /* padding: 23px 56px 6px 78px;  */
+
+            /*padding/margin: y(top/bottom) x(left/right)*/                       
+
+            padding: 34px 17px;                 
+            margin: 34px 17px; 
+            border-radius: 23px;
+            width: 533px;
+            box-sizing: border-box;   /*if we increase padding in x then the width also increases, so keep the width same we use box-sizing: border box */
+            outline: 4px solid black;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">   <!--we used class in div because we have used 3 div on this page and we have to apply same property on every div-->
+        <h3>This is my heading</h3>
+        <p id="first">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo pariatur, laborum blanditiis a quia voluptate! Dolore aliquid sed dignissimos facere doloremque, et deserunt!</p>       <!--to write lorem ipsum dummy text write lorem23 and presss enter-->
+    </div>
+
+    <div class="container">   
+        <h3>This is my heading</h3>
+        <p id="first">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo pariatur, laborum blanditiis a quia voluptate! Dolore aliquid sed dignissimos facere doloremque, et deserunt!</p>     
+    </div>
+
+    <div class="container">   
+        <h3>This is my heading</h3>
+        <p id="first">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo pariatur, laborum blanditiis a quia voluptate! Dolore aliquid sed dignissimos facere doloremque, et deserunt!</p>       
+    </div>
+</body>
+</html>

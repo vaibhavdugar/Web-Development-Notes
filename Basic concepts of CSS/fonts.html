@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    
+    <!-- Stylesheet link from google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        /* Web Save fonts: Which are pre installed in our pc */
+        /* Web fonts: which are to be imported from from web */
+        p{
+            font-family:cursive;
+            font-size: 43px; /*px is 1/96th of an inch*/
+            line-height: 3.5em; /*ditance b/w 2 fonts*/
+        }
+        span{
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Font stack : If first font is not available it will apply the next font*/
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        /* To add fonts from google fonts(web) */
+        p{
+            font-family: Odibee Sans;
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Fonts</h3>
+    <p>Lets play with <span>fonts</span>. It is very exciting</p>
+</body>
+</html>

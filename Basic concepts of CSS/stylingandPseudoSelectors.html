@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling and Pseudo Selectors</title>
+    <style>
+        /*Pseudo Selectors or basically pesudo class*/
+        a:hover{
+            color: dodgerblue;  /*when i take my cursor on Read More, it's color changes.*/
+            background-color: chartreuse;
+        }
+        a:visited{
+            color: crimson;  /*if we have visited on the link then it's color will change*/
+            background-color: yellow;
+        }
+        a:active{
+            color: rgb(19, 19, 255);   /*as i click on the link it's color becomes darkblue*/
+            background-color: rgb(17, 255, 255);
+        }
+        button:hover{
+            color: rgb(59, 190, 92);   /*simillarly we can apply pseudo selectors on button as well*/
+        }
+
+        /* .btn:hover{ } to apply the properties on link and button by coding just once */
+
+        .btn:hover{
+            border: 2px solid red;
+        }
+
+        .container{
+            border: 2px solid blue;
+            background-color: rgb(214, 214, 236);
+            padding: 35px;
+            margin: 35px auto;
+            width: 500px;
+        }
+        a{
+            text-decoration: none;  /*to remove underline from Read More*/
+            color: black;
+
+            /*to underline the text in either link or button*/ 
+
+            /* text-decoration: underline;  */
+        }
+        .btn{
+            background-color: rgb(245, 240, 223);
+            padding: 5px;
+            border: none;   /*to remove border from both button and link*/
+            cursor: pointer;   /*before adding this property pointer was only on the link and not on button*/
+            font-size: 13px;
+            border-radius: 4px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo aperiam neque fuga cupiditate voluptate laudantium esse cum adipisci dolorem, facilis aut quidem aliquid necessitatibus similique totam cumque nesciunt dolor.</p>
+        <a href="https://www.apple.com/" class="btn" target="blank">Read More</a>   
+        <button class="btn">Contact Us</button>
+    </div>
+</body>
+</html>

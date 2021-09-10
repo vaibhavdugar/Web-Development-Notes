@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    <script>
+        // JSON stands for JavaScript Object Notation is a lightweigth format for storing and transporting data.
+        let jsonObj = {
+            name: "Vaibhav",
+            college: "BIT Mesra",
+            year: "Second",
+            salary: "10Cr",
+            food: "Pizza",
+        }
+        console.log(jsonObj);
+        // We can convert this object into string
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);   // Once it is converted to string we can apply all the string functions to it.
+
+        // Now to replace something in the object
+        myJsonStr = myJsonStr.replace("BIT Mesra", "IIT Bombay");
+        console.log(myJsonStr);
+
+        // To convert this string again to object
+        let newJSonObj = JSON.parse(myJsonStr); // We have to pass a JSON string here then only it will work otherwise it will give an error.
+        console.log(newJSonObj);
+    </script>
+</body>
+</html>

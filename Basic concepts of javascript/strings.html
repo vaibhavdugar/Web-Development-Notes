@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Strings and String methods</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+        <div id="content"></div>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus officia veritatis, facere rem blanditiis aliquam ab recusandae tempora saepe deleniti facilis hic dignissimos aut in tempore laborum laboriosam iste. Quisquam voluptatibus exercitationem beatae nihil corrupti nemo architecto labore perspiciatis iure.</p>
+    </div>
+    <script>
+        // var string = "this";
+        var string = 'th"is'; // we can use single codes also if we have to use double codes inside the string
+        var name = "Vaibhav";
+        var message = "is a good boy";
+        var college = "BIT Mesra"
+        console.log(name +" "+ message); // string concatination 
+        var temp = `${name} ${message} 'and' he "studies" in ${college}`;  // This template can be used when we want to fill the string afterwards. ${name} is just like fill in the blanks
+        console.log(temp);
+
+        var len = message.length;
+        console.log(`The length of the string name is ${len}`);
+
+        // Escape sequence characters
+        console.log("Hello world\nVaibhav\tand\b");
+        // \n takes us to the next line
+        // \t is used to give space b/w two characters
+
+        var y = new String("this");  // It is a string constructor which is used to create a new string
+        console.log(y);
+
+        document.getElementById("content").innerHTML = "<h3>This is an h3 heading</h3>";   // This is how we can insert this h3 in HTML using JavaScript. Here id = "content", .innerHTML is a part of DOM
+        // This can also be used to select content from the above HTML body and change something in it
+        document.getElementById("para").innerHTML = "VaibhavDugar";
+        
+
+    </script>
+</body>
+</html>

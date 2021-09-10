@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yin and Yang</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .yin-yang{
+            width: 90px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid black;
+            position: relative;
+            border-right: 90px solid black;
+        }
+        .yin-yang::before{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 35px solid black;
+            background-color: white;
+            border-radius: 50%;
+            top: 0px;
+            left: 50%;
+        }
+        .yin-yang::after{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 35px solid white;
+            background-color: black;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="yin-yang"></div>
+    </div>
+</body>
+</html>

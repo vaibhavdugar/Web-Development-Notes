@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox1</title>
+    <style>
+        /* Flexbox is a one-dimensional layout method for laying out items in rows or columns.
+        
+        It's is a better way to allign items into a container
+        
+        Flexbox = Flexible + Box */
+            
+        .container{ /*Flex container*/
+            border: 2px solid black;
+            height: 544px;
+            width: 100%;
+            display: flex;  /*initialise the container as flex box. Initially the display of container and items was block*/
+
+            /* Flex properties for flex conatiner */
+
+            /* row is a default value for flex-direction */
+
+            /*in a row from left hand side*/
+            flex-direction: row;
+
+             /*in a row from right hand side*/
+            /* flex-direction: row-reverse;  */
+
+            /*in column from top*/
+            /* flex-direction: column; */
+
+            /*in column from bottom*/
+            /* flex-direction: column-reverse; */
+
+            /* default */
+            /* flex-wrap: nowrap; */
+            /*used to make website responsive i.e. the boxes will come in next line automatically as the size of the layout decreases */
+            flex-wrap: wrap; 
+            
+            /*the boxes will wrap from bottom to top*/
+            /*flex-wrap: wrap-reverse;  */
+            
+            /*Both the above properties can be used simultaneously*/
+            flex-flow: row-reverse wrap;  
+        }
+
+        .items{  /*flex items*/
+            width: 200px;
+            height: 200px;
+            border: 2px solid blue;
+            margin: 10px;
+            padding: 3px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h2>This is Flexbox</h2>
+    <div class="container">
+        <div class="items" id="item1">First Box</div>
+        <div class="items" id="item2">Second Box</div>
+        <div class="items" id="item3">Third Box</div>
+        <div class="items" id="item4">Fourth Box</div>
+        <div class="items" id="item5">Fifth Box</div>
+        <div class="items" id="item6">Sixth Box</div>
+    </div>
+</body>
+</html>

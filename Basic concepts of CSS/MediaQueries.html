@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            color: white;
+            background-color: rgb(122, 27, 122);
+            text-align: center;
+            font-size: 30px;
+            display: none;
+        }
+
+        /* "only screen" means that our website will work only on the devices with screen and not on something like projector etc.. */
+
+        @media only screen and (max-width:300px){  /*here min-width is 0*/
+            #box1{
+                display: block;
+                background-color: rgb(99, 80, 207);
+            }
+        }
+        @media only screen and (min-width:300px) and (max-width:500px){
+            #box2{
+                display: block;
+                background-color: rgb(12, 143, 23);
+            }
+        }
+        @media only screen and (min-width:500px) and (max-width:800px){
+            #box3{
+                display: block;
+                background-color: rgb(255, 72, 16);
+            }
+        }
+        @media (min-width:800px) and (max-width:1100px){
+            #box4{
+                display: block;
+                background-color: rgb(251, 255, 10);
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">Mai ek iPhone hu</div>
+    <div class="box" id="box2">Mai ek tablet hu</div>
+    <div class="box" id="box3">Mai ek computer hu</div>
+    <div class="box" id="box4">Mai ek wide computer hu</div>
+</body>
+</html>

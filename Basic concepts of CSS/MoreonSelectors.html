@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /*this is applied for all the paragraphs inside div*/
+        /* div p{ 
+            color: yellow;
+            background-color: royalblue;
+        } */
+        
+        /*this is applied only for the paragraph which is just inside div i.e. paragraph 1 and 2. Paragraph 1 and 2 are the child elements of div*/
+        /* div > p{
+            color: yellow;
+            background-color: royalblue;
+        } */
+
+        /*this property will be applied on the paragraph whose previous sibling is div i.e. it will be applied on para 3 and 2 
+        
+        para3 and div both are in body tag which is their parent and both of them are siblings
+        and para2 and div both are in container so they are also siblings*/
+        div + p{ 
+            color: yellow;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li>This is paragraph under li</li>
+            </ul>
+            <p>This is paragraph 1</p>
+        </div>
+        <p>This is paragraph 2</p>
+    </div>
+    <p>This is paragraph 3</p>
+</body>
+</html>

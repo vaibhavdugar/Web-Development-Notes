@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript SetTimeout and ClearTimeout</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    <script>
+        // setTimeout --> The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds. It executes only one time.
+
+        // clearTimeout --> The clearTimeout() method clears a timer set with the setTimeout() method.
+
+        function greet(name, byeText){
+            console.log("Hello, Good Morning " + name + byeText);
+        }
+        let timeout = setTimeout(greet, 5000, "Vaibhav ", "Take Care");  // Our message will print after 5sec or 5000 milliseconds. "Vaibhav" is the parameter 'name' which is passed as third arguement in this function.
+
+        // setTimeout(greet(), 5000);  --> This is wrong as we cannot call function in setTimeout().
+
+        // Now if I have to clear this timeOut using logic, it can be done bu clearTimeout().
+        clearTimeout(timeout);
+
+
+        // setInterval --> It is same as setTimeout() but the difference is that it will run in every 5sec. 
+        function greetings(name, byeText){
+            console.log("Hello, Good Morning " + name + byeText);
+        }
+        let IntervalId = setInterval(greetings, 5000, "Rahul ", "Take Care");
+         
+        clearInterval(IntervalId);   // This is used to clear setInterval().
+    </script>
+</body>
+</html>

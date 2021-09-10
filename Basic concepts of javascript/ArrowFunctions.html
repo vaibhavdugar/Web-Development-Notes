@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    <script>
+        function greet(){
+            console.log("Good Morning");
+        }
+        greet();
+
+        // Arrow functions are written to write these functions in a short form
+        greet = ()=> {
+            console.log("Good Night");
+        } 
+        greet();
+
+        // To find sum
+        let sum = (a,b)=>{
+            return a+b;
+        }
+        // let retVal = sum(23,15);  This can be written in console as well like sum(10,20)
+        // console.log(retVal);
+
+        // We can write it in the shortest form
+        let sum2 = (a,b) => a+b;
+        // let answer = sum2(15,5);
+        // console.log(answer);
+
+        let half = d => d/2;  // If there is a single parameter then bracket is also not required.
+
+        let greetings = () => console.log("Hello World");
+        greetings();
+
+        // Arrow functions are used in setTimeout.
+        setTimeout(() => {
+            console.log("We are inside setTimeout");
+        }, 3000);
+
+        let object = {
+            greeting: "Good Morning",
+            names: ["Vaibhav", "Rahul", "Abhinav", "Anand"],
+            speak(){
+                // "this" is used to show that 'names' is in the object
+                // We can use arrow function in forEach() loop
+                // student is the parameter which is already passed in array
+                this.names.forEach((student)=>{
+                    console.log(this.greeting + " Happy Birthday " + student);
+                    // "this" used with greeting belongs to the parent of arrow function i.e. object which shows that "greeting" is in the object.
+                    // If we use another function inside the function in object instead of arrow function, then "this" used with greeting will belong to that function and the output will be undefined. 
+                });
+            }
+        }
+        object.speak();  // calling the function inside the object
+    </script>
+</body> 
+</html>

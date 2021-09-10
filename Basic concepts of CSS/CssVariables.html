@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom Properties</title>
+    <style>
+        :root{
+            /* The variables used here will be global variables we can use them in any class. */
+
+            --border-color: rgb(136, 17, 37);
+            --maxw: 400px;
+        }
+        .box{
+            --box-color: blue; /*This is a CSS Varible. This is very useful as we can change the color here and it will change from everywhere, we don't have to change it individually at different places.*/
+
+            /* --box-color variable can be used in box class only. If we have to use it in container class them we'll have to declare the variable again in container class. Basically this is a local variable */
+            width: 200px;
+            height: 200px;
+            background-color: var(--box-color);
+            box-shadow: 3px 3px var(--box-color);
+            border: 4px solid var(--border-color);
+            margin: 20px;
+        }
+        .container{
+            --box-color: pink;
+            display: flex;
+            background-color: var(--box-color);
+            border: 4px solid var(--border-color);
+            align-items: center; /*vertical center*/
+            justify-content: center; /*horizontal center*/
+            width: var(--maxw);
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

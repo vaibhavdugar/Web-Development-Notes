@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After pseudo selectors</title>
+    <style>
+
+        /*before and after pseudo selectors are *inline* by default*/
+
+        /*before and after pseudo selectors are also used to decrease the opacity of background image so that the text is visible on the background image*/
+
+        body{
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+        }
+        section{
+            align-items: center; /*horizontal center*/
+            margin: 0px 61px;
+            display: flex;
+            flex-direction: column;
+            height: 280px;
+            justify-content: center;   /*used to bring text in the vertical center of the box*/
+            color: white;
+                }
+        .navigation{
+            font-size: 23 px;
+            display: flex;
+            color: white;
+        }
+        li{
+            list-style:none;  /*to remove the bullets from the ul */
+            padding: 15px 10px;
+        }
+        section::before{  /*to insert content before the content of section*/
+            content: "this is a content";
+        }
+        section::after{
+            /*to insert content after the content of section*/
+            content: "this is content after section";
+        }
+        h3{
+            font-size: 4rem;
+            color: rgb(228, 214, 188);
+            margin: 0px;
+        }
+        header::before{
+            /*we can use "header::after" as well*/
+            background: url('https://images.unsplash.com/photo-1463424591693-a7c7ed4e3342?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI1MDc0NTUz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600')
+
+            no-repeat center center/cover;
+
+            /*source.unsplash.com is a website used to produce different types of background images*/
+
+            content: ""; /*this is a must. without content, the below properties won't work.*/
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /*so that the image is behind the content*/
+            opacity: 0.5; /*opacity of image decreases so that the text is easily visible*/
+        }
+        img::before{  /*before and after pseudo elements will not work on an image*/
+            content: "";
+            display: block;
+            width: 100px;
+            height: 100px;
+            display: block;
+            background: purple;
+        }
+        p{
+            text-align: center;
+        }
+        p::before{
+            content: "this is a content";
+            display: block;
+            background: red;
+
+        }
+        p::after{
+            content: "this is a content";
+            display: block;
+            background: red;
+
+        }
+    </style>
+</head>
+<body>
+  <header>
+      <nav class="navbar">
+          <ul class="navigation">
+              <li id="item">Home</li>
+              <li id="item">About Us</li>
+              <li id="item">Services</li>
+              <li id="item">Contact</li>
+          </ul>
+      </nav>
+    </header>
+      <section>
+          <h3>Welcome to our Coding World</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, qui. Id vel mollitia repellat officiis numquam sint sed temporibus dolorum consequuntur excepturi quod, esse eligendi, tenetur earum maxime quis quos!</p>
+      </section>
+      <hr> <!--horizontal rule which is used to draw a line-->
+      <img src="//unsplash.it/500/500" alt="">
+</body>
+</html>

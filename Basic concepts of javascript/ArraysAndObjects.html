@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects in JavaScript</title>
+</head>
+<body>
+    <script>
+        // There are 2 types of values in JavaScript: Primitive and Reference (objects)
+        // Either primitive datatypes are formed or objects are formed
+
+        // These all are primitive values
+        let myVar = 32;
+        let myVar1 = "string";
+        let myVar2 = true; // Boolean values
+        let myVar3 = null; // null means "no-value"
+        let myVar4 = undefined;  // "myVar4" variable has an undefined value because either no value has been assigned to it or the variable has not been declared.
+        let var1;  // The default value of this is undefined
+        console.log(myVar4)
+
+        // Object
+        // Objects are used to store more than one values
+        let founder = {
+            name: "Vaibhav",
+            college: "BIT Mesra",
+            profession: "Developer",
+            salary: "100Cr",
+            "profession 2": "Artist",  // If i have to give space b/w profession and 2 then i have to put them in ""
+        }
+        console.log(founder)
+        console.log(founder.name)
+        console.log(founder['name'])   // Both of them will give same output
+        console.log(founder['profession 2']) // This will be written in this way only
+
+        // Array is also an object
+        let names = [1,2,"vaibhav",null,undefined];      // We can store any type of value in array
+        let classes = new Array(41,2,4,"Rahul");  
+        // This is used to create new objects/Array
+        console.log(names)
+        console.log(names[0])
+        console.log(classes)
+        console.log(classes.length)  // To find the length of an array
+        classes = classes.sort();   // To print classes array in sorted order (ascending) according to alphabets like they are the ASCII value of some alphabets so ascending order alphabetically.
+        console.log(classes);
+
+        classes.push("this is pushed");  // This is used to add an element at the end of an array
+        console.log(classes)
+
+        let employees = new Array(15);  // This will form an empty array in which there will be 15 spaces.
+    </script>
+</body>
+</html>

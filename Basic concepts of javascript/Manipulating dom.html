@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Services</li>
+            <li>More About Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        This is another container
+    </div>
+    <script>
+        let main = document.getElementById("main");
+        console.log(main);   // This is how I can access my DOM
+        let nav = document.getElementById("nav");
+        console.log(nav.innerHTML); 
+        // This will print HTML inside nav.
+
+        // nav.innerHTML = "<li>Home</li>";   
+        // Now the inner HTML consists of just Home tag.
+        // console.log(nav.innerHTML);
+
+        let containers = document.getElementsByClassName("container");
+        console.log(containers);  // This will give two containers container[0] and container[1].
+
+        let sel = document.querySelector('.container');
+        console.log("Selector returns ", sel);   // querySelector is used to select the first div with class container if there are multiple div's with same class. We can also use it for id like, #nav
+
+        let selAll = document.querySelectorAll('#nav>li');
+        console.log("Selector returns ", selAll);  // If I remove "All" then we will get only first li. It will work like array and we can select elements which are on 0th, 1st etc index.
+        selAll[0].innerHTML = "Inserted";  // It will change Home to inserted.
+
+    </script>
+</body>
+</html>

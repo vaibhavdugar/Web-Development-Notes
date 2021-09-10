@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+        </ul>
+    </div>
+    <script>
+        var string1 = "This is a string";
+        var string1 = "This is a string2";   // var is a global scope. It can be re-declared again if it's outside the function and we can access it from anywhere but if it's inside the function then its scope is inside the function only. It cannot be accessed from outside the function
+        console.log(string1)
+
+        let a = "vaibhav";  // This is another way to declare variables. "let" is a block scope. Outside the block it is global scope only. It can be declared only once.
+        console.log(a)
+
+        // let a = "car";   
+        // when i declare 'a' again it will give me error that 'a' has already been declared.
+
+        {   // This is a block
+
+            let a = "car";    // But when i declare 'a' in the block it will not give error beacuse this 'a' has meaning in this block only, we cannot access it from outside the block.
+            console.log(a)
+        }
+        console.log(a)  // This will print vaibhav and not car
+        
+        const b = "This cannot be changed"    // "const" is also used to declare variables
+
+        // b = "why this cannot be changed";  
+        // now, this will throw error because the value of constant cannot be changed.
+        console.log(b);
+    </script>
+</body>
+</html>

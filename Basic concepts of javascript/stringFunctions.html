@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions in JavaScript</title>
+</head>
+<body>
+    <script>
+        var str = "This is a string";
+        console.log(str);
+        // indexOf() function is used to find the posiition of an element (its first occurence)
+        var position = str.indexOf('is');
+        console.log(position);
+
+        // It will give last occurence
+        position = str.lastIndexOf('is'); // We are not using var here again before position as we have used it one time
+        console.log(position);
+
+        // Substring from a string
+        var substr = str.slice(1,6);  // it will print "his i" strating from 1 and ending at 5th position.
+        console.log(substr);
+
+        var substr = str.slice(6,-2); // slice() can take negative values as well and -1 starts from back (g is -1, n is -2, i is -3 and so on)
+        console.log(substr);
+
+        var substr = str.substring(1,6);  // substring() is same as slice() but the difference is that it can't take negative values. And it will also start from 1 and end at 5th position.
+        console.log(substr);
+
+        var substr1 = str.substr(1,6); // Same as above functions but it will include 6th position as well
+        console.log(substr1);
+
+        // replace() function is used here to replace 'string' with 'Vaibhav'
+        var replaced = str.replace('string', 'Vaibhav');
+        console.log(replaced);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        var newString = str.concat(" My name is Vaibhav");
+        console.log(newString);  // "My name is Vaibhav" will concat in str string. We can also use "+" for concatination.
+
+        var strWithSpaces = "      this is       whitespaces      ";
+        console.log(strWithSpaces);
+        console.log(strWithSpaces.trim());  // This trim() function will remove white spaces from the starting and ending but not in between.
+
+        var char2 = str.charAt(2);
+        console.log(char2);  // charAt() function gives the characyer at the given index
+
+        char2 = str.charCodeAt(2);
+        console.log(char2);    // This will give the character code of i which is at index 2. (UTF-16 character code)
+        
+        console.log(str[3])  // This will give us the element at 3rd position.
+    </script>
+</body>
+</html>

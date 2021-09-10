@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container{ /*flex container*/
+            border: 2px solid black;
+            height: 544px;
+            width: 100%;
+            display: flex; 
+
+            /* flex-direction: row;
+            flex-wrap: wrap;  */
+            
+            flex-flow: row nowrap;  
+
+            /*Brings all the boxes in center*/
+            /* justify-content: center;  */
+
+            /*it is same as flex-direction: row;
+            The boxes will start from the beginning */
+            /* justify-content: flex-start; */
+
+            /*the boxes will shift to the right hand side til the end of container*/
+            /* justify-content: flex-end; */
+            
+            /*Every two box will have the same space between them*/
+            /* justify-content: space-between; */
+
+            /*Same space between the container and the box or box and box*/
+            /* justify-content: space-evenly; */
+
+            /*same space on the two sides of each box*/
+            /* justify-content: space-around; */
+
+            /*bring the boxes in vertical center of the container*/
+            align-items: center; 
+
+            /*the boxes will be at the bottom of the container*/
+            align-items: flex-end;
+
+            /*the boxes will be at the bottom of the container. It is same as flex-direction: row;*/
+            align-items: flex-start;
+
+            /* align-items: stretch; The flexbox items will stretch across the whole cross axis. By default, the cross axis is vertical. This means the flexbox items will fill up the whole vertical space. */
+            align-items: stretch;
+
+            /* all the properties of "justify-content" will be used in "align-items" as well but in verticle direction. */
+        }
+
+        .items{  /*flex items*/
+            width: 200px;
+            height: 200px;
+            border: 2px solid blue;
+            margin: 10px;
+            padding: 3px;
+            background-color: burlywood;
+        }
+        #item1{
+            /*flex properties for a flex item*/
+
+            /* Higher the order, later it shows up in the container */
+
+            /* order: 2; */
+
+            /*this box will now take more space than before as we increases the size of the layout to see responsiveness.*/
+
+            /* flex-grow: 3;  */
+
+            /* we can't use negative numbers in flex-grow */
+        }
+        #item2{
+            /*when we reduce the size of the layout for responsiveness box 2 shrinks much more as compared to others because of flex-shrink*/
+
+            /* flex-shrink: 3; */
+
+            flex-basis: 160px; /*when flex direction is set to row flex-basis will control width*/
+
+            /* when flex direction is set to column flex-basis will control height */
+
+        }
+        #item3{
+            /*order of box 3 is greater than that of box 1 so box 3 will be at last and box 1 will be just before it*/
+
+            /* order: 20;   */
+
+            flex:2 2 230px;  /*flex: (flex-grow) (flex-shrink) (flex-basis)*/
+
+            align-self: flex-end;    /*Only box3 will go at the end of flex i.e. at the bottom*/
+            align-self: flex-start;   /*only box3 will go at the top of the container(flex)*/
+            align-self: center;     /*only box3 will go at the center of the container(flex)*/
+        }
+    </style>
+</head>
+<body>
+    <h2>This is Flexbox</h2>
+    <div class="container">
+        <div class="items" id="item1">First Box</div>
+        <div class="items" id="item2">Second Box</div>
+        <div class="items" id="item3">Third Box</div>
+    </div>
+</body>
+</html>

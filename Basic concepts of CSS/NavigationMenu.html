@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body{
+            background-color: rgb(228, 165, 165);
+        }
+        .navbar a:hover{
+            text-decoration: underline;
+        }
+        .navbar{
+            background-color: rgb(255, 231, 231);
+            border-radius: 34px;
+        }
+        .navbar dl{
+            overflow: auto;     /* this property is used when background colour is not visible in .navbar due to the use of float property for content to be in the same line. (overflow: auto;) makes sure that after using this background color is visible*/
+        }
+        .navbar dt{         /*css applied on dt in navbar*/
+            float: left;
+            margin: 3px;
+            padding: 10px;
+            text-decoration: none;
+
+        }
+        .input{
+            margin: 5.2px;
+            padding: 2px 30px;
+        }
+        .search{
+            float: right;
+            margin: 3px 5px;
+            padding: 2px 5px;
+            border-radius: 34px;
+            text-align: center;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: black;
+        }
+        img{
+            height: 20px;
+            float: right;
+            margin: -2px -201px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <dl>
+                <dt><a href="#">Home</a></dt>
+                <dt><a href="#">Admission</a></dt>
+                <dt><a href="#">Fees</a></dt>
+                <dt><a href="#">About us</a></dt>
+                <dt><a href="#">Contact</a></dt>
+                <div class="input">
+                    <input type="text" name="search" class="search" placeholder="Search this website">
+                </div>
+                <a href="#"><img src="https://i7.pngguru.com/preview/765/401/199/magnifying-glass-computer-icons-search-box-icon-search-drawing-icon.jpg"></a>
+            </dl>
+        </nav>
+    </header>
+</body>
+</html>

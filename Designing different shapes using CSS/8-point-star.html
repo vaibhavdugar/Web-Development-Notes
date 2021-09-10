@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-point-star</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(242, 177, 255);
+        }
+        .eight-point-star{
+            width: 160px;
+            height: 160px;
+            background-color: rgb(163, 10, 112);
+            transform: rotate(45deg);
+            position: relative;
+        }
+        .eight-point-star::before{
+            content: "";
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            transform: rotate(-45deg);
+            background-color: rgb(163, 10, 112);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="eight-point-star"></div>
+    </div>
+</body>
+</html>

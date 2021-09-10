@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations and Keyframes</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: greenyellow;
+            padding: 10px 7px;
+            border: 2px solid palevioletred;
+        }
+        .box{
+            border: 2px solid red;
+            background-color: rgb(18, 224, 18);
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name: vaibhav1;
+            animation-duration: 3s; /*This tells the speed of animation*/
+            animation-iteration-count: infinite; /*numnber of times this animation will run*/
+            animation-fill-mode: forwards; /*In this case the box will stick when it's reached to it's final width(here it is 2000px)*/
+            animation-fill-mode: alternate; /*Here animation will work only one time, it will run and then come back to its original position*/
+            animation-timing-function: ease-in; /*Slow at the start but fast at the end*/
+            animation-timing-function: ease-out; /*fast at the start but slow at the end*/
+            animation-timing-function: ease-in-out; /*slow at the start fast in the middle and again slow at the end*/
+            animation-delay: 3s; /*It will delay for 3s in the beginning*/
+            animation-direction: alternate; /*it will runin alternate direction form forward to backward and vidce-versa*/
+            animation-direction: reverse; /*it will run in backward direction*/
+            animation-direction: alternate-reverse; /*run from backward to forward and vice versa*/
+
+            /* animation-direction: forward; is dafault */
+        }
+        @keyframes vaibhav1{  /*to run animations we have to add keyframes*/
+            from{
+                width: 200px;  /*The width of the box will change from 200px to 400px 3 times and thius is the animation*/
+            }
+            to{
+                width: 2000px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="box">
+           This is a box
+       </div>
+   </div> 
+</body>
+</html>

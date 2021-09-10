@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction using Alert, Confirm and Prompt</title>
+</head>
+<body>
+    <div class="container">
+        This is a page
+    </div>
+    <script>
+        // Alert in in-browser Javascript - Does not return anything
+        alert("This is a message");  // This will show a message at the top of the page and we can work on that page only after we click OK. 
+
+
+        // Prompt in JavaSCript - Returns the answer of our question
+        let name = prompt("What is your name?", "Guest");
+        console.log(name);  // This will also give a message with question where we'll have to type our name and "Guest" is default value there in the field where we'll have to type our name. If we don't write Guest then it will be blank.
+        // And our name will be printed in console.
+
+        
+        // Confirm in JavaSCript
+        let deletePost = confirm("Do you really want to delete this post?");
+        // console.log(deletePost);  
+        // This will give a confirmation message, if we click OK then it will print true and if we click cancel then it will print false.
+
+        if(deletePost){
+            console.log("Your post has been deleted successfully");
+        }
+        else{
+            console.log("Your post has not been deleted");
+        }
+    </script>
+</body>
+</html>

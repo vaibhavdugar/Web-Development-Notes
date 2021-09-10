@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnifying Glass</title>
+    <style>
+         body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(242, 177, 255);
+        }
+        .magnifying-glass{
+            width: 70px;
+            height: 70px;
+            background-color: rgb(242, 177, 255);
+            border: 12px solid rgb(163, 10, 112);
+            border-radius: 50%;
+            position: relative;
+        }
+        .magnifying-glass::before{
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 15px;
+            background-color: rgb(163, 10, 112);
+            top: 86px;
+            left: 51px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="magnifying-glass"></div>
+    </div>
+</body>
+</html>

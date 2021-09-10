@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        #btn{
+            padding: 10px 15px;
+            background-color: brown;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Browser Events:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit
+    focus
+
+    DOMContentLoaded
+
+    transitionend -->
+
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vitae vero enim nulla eligendi iusto cumque praesentium obcaecati repellat, voluptate aliquid quos! Voluptate laboriosam, tempora eos error, nemo autem voluptatibus necessitatibus facilis fugiat suscipit sint dolore quas inventore vel quo earum! Quia, dolor dolore provident impedit, aspernatur repudiandae, suscipit in quaerat perferendis quos vitae saepe recusandae aliquam? Expedita, nam. Totam, recusandae in cupiditate quos dignissimos officia ullam vitae quia illo, iste distinctio laborum, necessitatibus dolorum provident minus. Ab, nihil reprehenderit quam, dolorum error ad debitis quas voluptate odio ea expedita praesentium? Aliquam quos deserunt perspiciatis repudiandae veniam sunt optio. Voluptates, deserunt. Velit eius sequi quisquam asperiores dicta unde quia, fugiat ex incidunt nemo nam tempora corrupti dolor non a voluptatum quam. Eos animi laborum id quod vero. Ea pariatur nobis repellat illo excepturi consequatur a sed vitae dolore facere adipisci dolorem officia illum distinctio eius, deleniti voluptatibus maxime neque nihil quidem, amet ut. Similique quis optio soluta! Perspiciatis, incidunt. Similique quo officia, pariatur accusantium provident nobis illo beatae aliquam quos alias eligendi sapiente possimus, expedita ipsa velit molestias aperiam eius, amet nam! Nobis, voluptates assumenda? Deleniti pariatur, temporibus tempore consectetur culpa possimus ducimus? Officia at repellat deleniti cupiditate esse dicta!</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+    <script>
+        //  EVENTS - JavaScript's interaction with HTML is handled through events. When the page loads, it is called an event. When the user clicks a button, that click too is an event.
+
+        // EVENT LISTENERS - An event listener is a procedure in JavaScript that waits for an event to occur. And when the event happens they respond. For ex- On the click of a button we have to open menu bar.
+
+        function toggleHide(){
+            // toggle means to switch between hide and show.
+            // let btn = document.getElementById("btn");
+            // let para = document.getElementById("para"); 
+
+            // We will apply condition here that if display is none than make it block n=and if it is block then make it none.
+            if(para.style.display != 'none'){ 
+                // Here I can use para variable directly without declaring it because the id of paragraph is "para" and it can direcrly identify the variable from its id.
+                para.style.display = 'none';
+            }
+            else{
+                para.style.display = 'block';
+            }
+        }
+
+        let para = document.getElementById("para");
+        para.addEventListener('mouseover', function run(){
+            console.log('Mouse Inside');
+        });
+
+        para = document.getElementById('para');
+        para.addEventListener('mouseout', function run(){
+            console.log("Mouse is outside para");
+        });
+    </script>
+</body>
+</html>

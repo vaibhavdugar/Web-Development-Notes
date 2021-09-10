@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals in JavaScript</title>
+</head>
+<body>
+    <script>
+        let age = 36;
+        if(age>18){
+            console.log("You can drink water");
+        }
+        else if(age==18){
+            console.log("You can drink juice");
+        }
+        else{
+            consloe.log("You can drink cold drink");
+        }
+        // If-else can be used in form validation. Like "if someone fills his name instead of email in the form then he can't submit the form". Like this there are many scenarios where we can use if-else
+
+        // Switch case statement in JavaScript
+        const cups = 10;
+        switch (cups) {
+            case 10:
+                console.log("The value of cups is 10")
+                break;  // break is there to ensure that if this case matches the value of cups then it stops here and further cases doenn't print
+            case 25:
+                console.log("The value of cups is 25")
+                break;
+            case 40:
+                console.log("The value of cups is 40")
+                break;
+            case 44:
+                console.log("The value of cups is 44")
+                break;
+            default:
+                console.log("The value of cups is none of the above")
+                break;
+        }
+    </script>
+</body>
+</html>

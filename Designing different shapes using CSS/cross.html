@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0px;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(242, 177, 255);
+        }
+        .cross{
+            height: 30px;
+            width: 140px;
+            background-color: rgb(163, 10, 112);
+            transform: rotate(135deg);
+        }
+        .cross::before{
+            content: "";
+            position: absolute;
+            height: 30px;
+            width: 140px;
+            background-color: rgb(163, 10, 112);
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cross"></div>
+    </div>
+</body>
+</html>

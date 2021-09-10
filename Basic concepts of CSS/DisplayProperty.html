@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        *{
+            box-sizing: border-box;  /*universal seelctor to giv box-sizing: border-box to every element*/
+        }
+        img{ /*img is an inline element just like "span". We can't control the height and width of an inline element*/
+            height: 30px;   /*this is the change in the size of image. It will occupy that much height and width only that is of image. Inline element will never take extra space*/
+
+            display: block;   /*we have converted it to block element so that it can move along the width otherwise it's width is fixed*/
+            margin: auto;
+        }
+        h2{ /*h2 is a block element just like "div"*/
+            margin: 0px;        
+            text-align: center;
+        }
+        header{
+            border: 2px solid rebeccapurple;
+            width: 1200px;      /*we have to mention the width to bring header to the center i.e margin: auto; because initially the width of header is 100% which means we can't know whetehr it's in center or not*/  /*width is not given 100% to see if the website is responsive*/
+            margin: auto;
+            box-sizing: border-box;
+        }
+        .box{
+            border: 2px solid green;
+            margin: 2px;
+            padding: 10px;
+            background-color: seashell;
+            display: inline-block;
+            width: 32.77%;
+            box-sizing: border-box;  /*this is used so that all the boxes fit in the same line*/
+        }
+        .container{
+            border: 2px solid red;
+            margin: auto;
+            width: 1200px;      /*we can give margin after we add width*/
+        }
+           
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://digitalsynopsis.com/wp-content/uploads/2019/04/beautiful-gradient-logo-designs-1.jpg">
+        <h2>This is my Webpage</h2>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ex optio et maxime modi porro quo quibusdam, veritatis adipisci cumque praesentium ratione enim vitae neque nam voluptatem blanditiis laboriosam repellat mollitia! Aperiam debitis enim quibusdam vel corporis soluta voluptatibus, cum cupiditate officia dicta. Odit, dolore.</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ex optio et maxime modi porro quo quibusdam, veritatis adipisci cumque praesentium ratione enim vitae neque nam voluptatem blanditiis laboriosam repellat mollitia! Aperiam debitis enim quibusdam vel corporis soluta voluptatibus, cum cupiditate officia dicta. Odit, dolore.</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ex optio et maxime modi porro quo quibusdam, veritatis adipisci cumque praesentium ratione enim vitae neque nam voluptatem blanditiis laboriosam repellat mollitia! Aperiam debitis enim quibusdam vel corporis soluta voluptatibus, cum cupiditate officia dicta. Odit, dolore.</p>
+        </div>
+    </div>
+</body>
+</html>

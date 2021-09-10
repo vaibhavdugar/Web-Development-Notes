@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning in CSS</title>
+    <style>
+
+        /* CSS Positions */
+
+        /* position: static(default), relative, absolute, fixed, sticky */
+        .box{
+            border: 2px solid black;
+            width: 5%;
+            height: 60px;
+            margin: 2px;
+            display: inline-block;
+        }
+        .container{
+            border: 2px solid red;
+            background-color: seashell;
+            height: 4000px;
+        }
+        #box1{
+            background-color: green;
+        }
+        #box2{
+            background-color: yellow;
+            position: sticky;   
+            top: 10px;      /*initially the box will be in it's static position but as we scroll down it will stick on top with the distance of 10px from top of the viewport(screen) */
+        }
+        #box3{
+            background-color: orange;
+            position: relative;     /*relative to its normal position and will leave a gap at it's normal position*/
+            top: 34px;  /*it will move 34px down from its normal position */
+            left: 34px;  /*it will move 34px towards right from left */
+
+
+            position: absolute;   /*relative to the parent's body(first parent). Here container is the parent first parent and body tag is the second parent*/
+            top: 34px;      /*it will move 34px down relative to parent's position */
+            left: 34px;     /*it will move 34px towards right from left relative top parent's position */
+        }
+        #box4{
+            color: white;
+            font-size: 15px;
+            background-color: blue;
+
+            /*this is generally used when we make chats*/
+            position: fixed;
+            right: 10px;      /*it will get fixed on right side with 10px distance from viewport(screen). And the box will remain on same place even on scrolling down/up*/
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div id="box1" class="box"></div>
+         <div id="box2"class="box"></div>
+         <div id="box3"class="box"></div>
+         <div class="box" id="box4">chat with us</div>
+    </div>
+</body>
+</html>

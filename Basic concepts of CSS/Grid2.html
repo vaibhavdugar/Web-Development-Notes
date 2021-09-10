@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanning multiple rows and columns in Grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            /* grid-column-gap: 3rem;
+            grid-row-gap: 1rem; */
+            grid-gap: 1rem;
+
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(212, 171, 212);
+            padding: 10px;
+            text-align: center;
+        }
+        .box:nth-child(1){
+            grid-column-start: 1;
+            grid-column-end: 3;    /* These two are used to merge two columns. grid-column-start: 1; means starting from first line and  grid-column-end: 3; means ending at third line */
+
+            grid-row-start: 1;
+            grid-row-end: 3;  /*These two are used to merge two rows. grid-row-start: 1;  means starting from first line and
+            grid-row-end: 3; means ending at third line */
+
+            /* when we use both of these together for rows and columns then we are combining 4 boxes to make a single box */
+
+            grid-column: 1 / span 2;  /*Here 1 means start from first line and span 2 columns*/
+            grid-row: 1 / span 2;     /*these are the short forms for above commands*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item1</div>
+        <div class="box">Item2</div>
+        <div class="box">Item3</div>
+        <div class="box">Item4</div>
+        <div class="box">Item5</div>
+        <div class="box">Item6</div>
+        <div class="box">Item7</div>
+        <div class="box">Item8</div>
+        <div class="box">Item9</div>
+        <div class="box">Item10</div>
+        <div class="box">Item11</div>
+        <div class="box">Item12</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html> 
+   <head> 
+       <style>
+
+         /* The CSS which is at the last will get more preference */
+
+          /* Id selectors */
+          #redElement{
+             color:yellow;
+             background-color: aqua;;
+          }
+
+          /* Class selectors */
+          .redElement{
+             color: green;
+          }
+          .bgblue{
+            background-color: hotpink;
+          }
+
+          /* Grouping selectors */
+          p, span{
+             border: 2px solid red;
+          }
+          .redElement, span{
+              color:palegreen;
+              background-color: rebeccapurple;
+           } 
+       </style>
+      <link rel="stylesheet" type="text/css" href="main.css">    <!--This is used for external CSS-->
+
+   </head>
+   <body>   
+      <h1>This is CSS tutorial</h1>
+      <div>
+         <p id="redElement">This is an amazing place</p>
+         <p class="redElement bgblue">I want to be a full stack developer</p>
+         <p>I want to become successful in life</p>
+      </div>
+      <span>This is CSS code</span>
+      
+   </body>
+</html> 
+
+

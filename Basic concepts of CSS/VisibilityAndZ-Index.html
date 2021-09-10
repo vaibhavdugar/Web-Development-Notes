@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Z-Index</title>
+    <style>
+        /* Z-Index only works with position property.
+        Like position: absolute, relative, sticky, fixed. Z-Index doesn't work with static(default psition) */
+        .box{
+            border: 2px solid black;
+            width: 70px;
+            height: 70px;
+        }
+        #box1{
+            background-color: blue;
+            position: relative;
+            top: 50px;
+            z-index: 30;
+        }
+        #box2{
+            background-color: rgb(66, 216, 86);
+            /* Visibility: visible(default), hidden, collapse */
+            /* Visibility: hidden ---> The box will be hidden. It will not be visible but its place will be reserved. */
+
+            /* visibility: hidden; */
+
+            /*it will remove the box2 and its reserved space as well*/
+
+            /* display: none;  */
+
+            position: relative;
+            top: 35px;
+            z-index: -1;        /*z-index of box1 is greater than box2 so it will appear above box2*/
+
+            /*z-index can be negative as well*/
+
+            /* elements with positive z-index are in front of the screen while with negative z-index are behind the screen, hence we can't inspect the elements with negative z-index */
+        }
+        #box3{
+            background-color: rgb(255, 72, 0);
+
+             /*here also the box will not be visible*/
+            
+            /* visibility: collapse;   */
+        }
+        #box4{
+            background-color: rgb(169, 34, 231);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>
