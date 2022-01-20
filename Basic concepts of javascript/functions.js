@@ -1,4 +1,4 @@
-// Functions is JavaScripty
+// Functions in JavaScript
 
 // We use functions in javascript when we have to do something repeatedly. For ex-
 
@@ -22,7 +22,7 @@ function greet(name, greetText = "Greetings from JavaScript"){
     console.log(greetText + " " + name);
     console.log(name + " is a good boy");
 }
-// To print the text we have to call the function an dit can be called any number of times.
+// To print the text we have to call the function and it can be called any number of times.
 let name = "Vaibhav";
 let name1 = "Rahul";     // The scope of this name1 is global. It can be accessed from anywhere and is different from the name1 inside the function.
 let name2 = "Rishabh";

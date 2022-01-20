@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage and Session Storage</title>
+</head>
+<body>
+    <script>
+        // Local Storage - It will be there forever even if we close the browser
+
+        // localStorage.setItem('Key', 'Value')
+        localStorage.setItem('Name', 'Vaibhav')
+        localStorage.setItem('Name2', 'Riya')
+
+        // localStorage.getItem('Key')
+        let name = localStorage.getItem('Name')
+        console.log(name)
+        // If the key is not found in the console than it will give null
+
+        // To clear local storage
+        localStorage.clear()
+
+        // To remove a particular key value pair
+        localStorage.removeItem('Name')
+
+        // How to add an Array in local storage
+        let newArr = ['Sachin', 'Virat', 'Gautam', 'Rishabh']
+
+        localStorage.setItem('Cricketers', JSON.stringify(newArr)) // JSON.stringify() is used to convert the array(object) into the string
+        console.log(JSON.parse(localStorage.getItem('Cricketers')))  // JSON.parse is used to convert the string back to array
+
+        console.log(typeof('Name2')) // This is used to tell the type of key
+        localStorage.clear()
+
+        //Session Storage - All the data stored in this will be cleared once the browder is closed
+
+        // Session Storage - same as local storage
+        sessionStorage.setItem('sessionName', 'Vaibhav')
+        sessionStorage.setItem('sessionName2', 'Riya')
+
+        sessionStorage.clear()
+    </script>
+</body>
+</html>

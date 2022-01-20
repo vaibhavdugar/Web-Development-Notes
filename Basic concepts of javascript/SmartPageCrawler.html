@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Page Crawler</title>
+</head>
+<body>
+    <script>
+        // Exercise 1
+        // You have to create a variable which is string containing the text which is a link you are interested in
+
+        // You have to fetch all the links from a given webpage which containes this text
+
+        // website - codewithharry.com
+        // text - javascript
+
+        let str = "python"
+        let links = document.links // Here links is all the anchor tags in the HTML document
+        let a
+        Array.from(links).forEach(function(element){
+            a = element.href // This is used to get all the href attributes in the anchor tag
+            if (a.includes(str)){ 
+                // If the word python is there in the links then only console.log
+                console.log(a)
+            }
+        })
+        document.write("This is my webpage")
+    </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OWL</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+      .container {
+        position: absolute;
+        height: 500px;
+        width: 500px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(252, 239, 224);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 18px;
+        box-shadow: 20px 20px 15px rgb(216, 205, 193);
+      }
+      .face {
+        height: 190px;
+        width: 260px;
+        border-radius: 100%;
+        left: 1px;
+        top: -52px;
+        background-color: rgb(114, 87, 51);
+        position: relative;
+      }
+      .face::before {
+        content: "";
+        position: absolute;
+        height: 128px;
+        width: 165px;
+        background-color: rgb(114, 87, 51);
+        top: 160px;
+        left: 45px;
+        border-radius: 50% / 100%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+      }
+      .face::after {
+        content: "";
+        position: absolute;
+        height: 49px;
+        width: 165px;
+        background-color: rgb(114, 87, 51);
+        left: 45px;
+        top: 265px;
+        border-radius: 100%;
+      }
+      .stomach {
+        transform: translate(-1px, 94px);
+        position: absolute;
+        height: 124px;
+        width: 115px;
+        border-radius: 50% / 100%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        background-color: rgb(173, 165, 154);
+      }
+      .stomach::before {
+        content: "";
+        position: absolute;
+        height: 27px;
+        width: 114.5px;
+        background-color: rgb(173, 165, 154);
+        left: -0.1px;
+        top: 112px;
+        border-radius: 100%;
+      }
+      .legs {
+        position: absolute;
+        transform: translate(-46px, 160px) rotate(3deg);
+        height: 22px;
+        width: 16px;
+        background-color: rgb(206, 140, 54);
+        border-radius: 100%;
+      }
+      .legs::before {
+        content: "";
+        position: absolute;
+        transform: translate(13px, 2px) rotate(3deg);
+        height: 22px;
+        width: 16px;
+        background-color: rgb(206, 140, 54);
+        border-radius: 100%;
+      }
+      .legs::after {
+        content: "";
+        position: absolute;
+        transform: translate(26px, 3px) rotate(3deg);
+        height: 22px;
+        width: 16px;
+        background-color: rgb(206, 140, 54);
+        border-radius: 100%;
+      }
+      .legs1 {
+        position: absolute;
+        transform: translate(43px, 160px) rotate(-3deg);
+        height: 22px;
+        width: 16px;
+        background-color: rgb(206, 140, 54);
+        border-radius: 100%;
+      }
+      .legs1::before {
+        content: "";
+        position: absolute;
+        transform: translate(-13px, 2px) rotate(-3deg);
+        height: 22px;
+        width: 16px;
+        background-color: rgb(206, 140, 54);
+        border-radius: 100%;
+      }
+      .legs1::after {
+        content: "";
+        position: absolute;
+        transform: translate(-26px, 2px) rotate(-3deg);
+        height: 22px;
+        width: 16px;
+        background-color: rgb(206, 140, 54);
+        border-radius: 100%;
+      }
+      .feather {
+        position: absolute;
+        height: 119px;
+        width: 74px;
+        background-color: rgb(88, 67, 39);
+        border-radius: 100%;
+        transform: translate(-69px, 99px) rotate(35deg);
+        z-index: -1;
+      }
+      .feather::before {
+        content: "";
+        position: absolute;
+        height: 119px;
+        width: 74px;
+        background-color: rgb(88, 67, 39);
+        border-radius: 100%;
+        transform: translate(113px, -78px) rotate(-70deg);
+        z-index: -1;
+      }
+      .neck {
+        position: absolute;
+        height: 28px;
+        width: 127px;
+        border-radius: 8px;
+        background-color: brown;
+        transform: translateY(41px);
+        z-index: 1;
+      }
+      .neck::before {
+        content: "";
+        position: absolute;
+        height: 28px;
+        width: 55px;
+        border-radius: 8px;
+        background-color: brown;
+        transform: translate(109px, 13px) rotate(35deg);
+      }
+      .skin {
+        position: absolute;
+        transform: translate(0px, 60px);
+        height: 20px;
+        width: 25px;
+        border-radius: 100%;
+        background-color: rgb(173, 165, 154);
+        box-shadow: 0 6px rgb(158, 151, 140);
+        z-index: 0;
+      }
+      .skin::before {
+        content: "";
+        position: absolute;
+        transform: translate(-20px, 30px);
+        height: 20px;
+        width: 25px;
+        border-radius: 100%;
+        background-color: rgb(173, 165, 154);
+        box-shadow: 0 6px rgb(158, 151, 140);
+      }
+      .skin::after {
+        content: "";
+        position: absolute;
+        transform: translate(20px, 30px);
+        height: 20px;
+        width: 25px;
+        border-radius: 100%;
+        background-color: rgb(173, 165, 154);
+        box-shadow: 0 6px rgb(158, 151, 140);
+      }
+      .skin1 {
+        position: absolute;
+        transform: translate(-35px, 125px);
+        height: 20px;
+        width: 25px;
+        border-radius: 100%;
+        background-color: rgb(173, 165, 154);
+        box-shadow: 0 6px rgb(158, 151, 140);
+      }
+      .skin1::before {
+        content: "";
+        position: absolute;
+        transform: translate(34px, -5px);
+        height: 20px;
+        width: 25px;
+        border-radius: 100%;
+        background-color: rgb(173, 165, 154);
+        box-shadow: 0 6px rgb(158, 151, 140);
+      }
+      .skin1::after {
+        content: "";
+        position: absolute;
+        transform: translate(69px, 0px);
+        height: 20px;
+        width: 25px;
+        border-radius: 100%;
+        background-color: rgb(173, 165, 154);
+        box-shadow: 0 6px rgb(158, 151, 140);
+      }
+      .ears {
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        border-left: 16px solid rgb(114, 87, 51);
+        border-top: 7px solid transparent;
+        border-bottom: 16px solid transparent;
+        transform: translate(135px, -45px);
+      }
+      .ears::before {
+        content: "";
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        border-right: 16px solid rgb(114, 87, 51);
+        border-top: 7px solid transparent;
+        border-bottom: 16px solid transparent;
+        transform: translate(-285.1px, -4px);
+      }
+      .ears1 {
+        position: absolute;
+        height: 70px;
+        width: 45px;
+        background-color: rgb(114, 87, 51);
+        border-radius: 0 50px 50px 0;
+        transform: translate(-80px, -128px);
+      }
+      .ears1::before {
+        content: "";
+        position: absolute;
+        height: 70px;
+        width: 45px;
+        background-color: rgb(114, 87, 51);
+        border-radius: 50px 0 0 50px;
+        transform: translate(160px, 0px);
+      }
+      .head {
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        border-left: 12px solid transparent;
+        border-bottom: 15px solid rgb(114, 87, 51);
+        border-right: 10px solid transparent;
+        transform: translate(-10px, -150px);
+      }
+      .head::before {
+        content: "";
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        border-left: 13px solid transparent;
+        border-bottom: 20px solid rgb(114, 87, 51);
+        border-right: 13px solid transparent;
+        transform: translate(5px, -8px);
+      }
+      .eyes {
+        position: absolute;
+        height: 125px;
+        width: 130px;
+        border-radius: 50%;
+        background-color: rgb(173, 165, 154);
+        transform: translate(-47px, -52px);
+      }
+      .eyes::before {
+        content: "";
+        position: absolute;
+        height: 125px;
+        width: 130px;
+        border-radius: 50%;
+        background-color: rgb(173, 165, 154);
+        transform: translate(95px, 0px);
+      }
+      .eyes1 {
+        position: absolute;
+        height: 102px;
+        width: 110px;
+        border-radius: 50%;
+        background-color: white;
+        transform: translate(-47px, -52px);
+        z-index: 1;
+      }
+      .eyes1::before {
+        content: "";
+        position: absolute;
+        height: 102px;
+        width: 110px;
+        border-radius: 50%;
+        background-color: white;
+        transform: translate(95px, 0px);
+      }
+      .eyes2 {
+        position: absolute;
+        height: 84px;
+        width: 84px;
+        border-radius: 50%;
+        background-color: rgb(56, 54, 50);
+        transform: translate(-46px, -52px);
+        z-index: 1;
+      }
+      .eyes2::before {
+        content: "";
+        position: absolute;
+        height: 84px;
+        width: 84px;
+        border-radius: 50%;
+        background-color: rgb(56, 54, 50);
+        transform: translate(95px, 0px);
+      }
+      .eyes3 {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border-radius: 50%;
+        transform: translate(-70px, -76px);
+        z-index: 1;
+      }
+      .eyes3::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border-radius: 50%;
+        transform: translate(95px, 0px);
+      }
+      .nose {
+        position: absolute;
+        height: 40px;
+        width: 23px;
+        border-radius: 50%;
+        background-color: rgb(206, 140, 54);
+        transform: translateY(-10px);
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="face"></div>
+      <div class="stomach"></div>
+      <div class="legs"></div>
+      <div class="legs1"></div>
+      <div class="feather"></div>
+      <div class="neck"></div>
+      <div class="skin"></div>
+      <div class="skin1"></div>
+      <div class="ears"></div>
+      <div class="ears1"></div>
+      <div class="head"></div>
+      <div class="eyes"></div>
+      <div class="eyes1"></div>
+      <div class="eyes2"></div>
+      <div class="eyes3"></div>
+      <div class="nose"></div>
+    </div>
+  </body>
+</html>

@@ -46,9 +46,17 @@
         console.log(classes);
 
         classes.push("this is pushed");  // This is used to add an element at the end of an array
+        classes.unshift("To put an element in starting of an array")
         console.log(classes)
+        classes.pop() // To remove an element from the end of an array
+        classes.shift()  // To remove an element from the start of an array
 
         let employees = new Array(15);  // This will form an empty array in which there will be 15 spaces.
+
+        // Array methods
+        console.log(Array.isArray(classes)) // It will return true/false whether classes is an array or not
+        console.log(classes.indexOf(41)) // It will give the index of 41 in array named classes
+
     </script>
 </body>
 </html>

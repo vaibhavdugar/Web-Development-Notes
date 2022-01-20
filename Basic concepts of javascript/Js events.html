@@ -30,11 +30,13 @@
 
     transitionend -->
 
+    <h1 id="heading" class="my-head" >Welcome to my website</h1>
+
     <div class="container">
         <h1>This is my heading</h1>
         <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vitae vero enim nulla eligendi iusto cumque praesentium obcaecati repellat, voluptate aliquid quos! Voluptate laboriosam, tempora eos error, nemo autem voluptatibus necessitatibus facilis fugiat suscipit sint dolore quas inventore vel quo earum! Quia, dolor dolore provident impedit, aspernatur repudiandae, suscipit in quaerat perferendis quos vitae saepe recusandae aliquam? Expedita, nam. Totam, recusandae in cupiditate quos dignissimos officia ullam vitae quia illo, iste distinctio laborum, necessitatibus dolorum provident minus. Ab, nihil reprehenderit quam, dolorum error ad debitis quas voluptate odio ea expedita praesentium? Aliquam quos deserunt perspiciatis repudiandae veniam sunt optio. Voluptates, deserunt. Velit eius sequi quisquam asperiores dicta unde quia, fugiat ex incidunt nemo nam tempora corrupti dolor non a voluptatum quam. Eos animi laborum id quod vero. Ea pariatur nobis repellat illo excepturi consequatur a sed vitae dolore facere adipisci dolorem officia illum distinctio eius, deleniti voluptatibus maxime neque nihil quidem, amet ut. Similique quis optio soluta! Perspiciatis, incidunt. Similique quo officia, pariatur accusantium provident nobis illo beatae aliquam quos alias eligendi sapiente possimus, expedita ipsa velit molestias aperiam eius, amet nam! Nobis, voluptates assumenda? Deleniti pariatur, temporibus tempore consectetur culpa possimus ducimus? Officia at repellat deleniti cupiditate esse dicta!</p>
     </div>
-    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <button id="btn" class="btn1" onclick="toggleHide()">Show/Hide</button>
 
     <script>
         //  EVENTS - JavaScript's interaction with HTML is handled through events. When the page loads, it is called an event. When the user clicks a button, that click too is an event.
@@ -65,6 +67,48 @@
         para.addEventListener('mouseout', function run(){
             console.log("Mouse is outside para");
         });
-    </script>
+
+        // document.getElementById("heading").addEventListener('click', function(){
+        //     console.log("I clicked the heading")
+        //     location.href = "https://www.google.com/"
+        // })
+
+        // Event Object
+        document.getElementById("heading").addEventListener('click', function(e) {
+            // Here e is the event object
+            console.log("I clicked the heading")
+            let variable = e.target // target tells about where we have clicked. Here e.target is the heading h1
+            console.log(e)
+            console.log(variable)
+            variable = e.target.className // class nanme of heading h1
+            variable = e.target.id  // id of heading h1
+            variable = e.target.classList // It will give a DOM token list (an object)
+            console.log(Array.from(variable)) // This is used to convert that object into an array
+        })
+
+        document.getElementById("heading").addEventListener('click', (e)=>{
+            // We can also use arrow fucntion here
+        })
+
+        let btn = document.getElementById("btn")
+        btn.addEventListener('click', func1);
+        
+        function func1(e){
+            console.log("we clicked on button")
+        }
+
+        // Some more events
+        document.querySelector(".btn1").addEventListener('mouseenter', func2)
+
+        function func2(e){
+            console.log("You entered btn1")
+        }
+        // Simillarly there is mouseleave, mouseover, mousemove etc.
+
+        document.querySelector(".container").addEventListener('mousemove', function(e){
+            document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 189)`  // the values in rgb are from 0-255
+        })
+        
+    </script>   
 </body>
 </html>
